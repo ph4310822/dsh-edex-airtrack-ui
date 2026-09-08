@@ -1,0 +1,142 @@
+{
+  "width": 1600,
+  "height": 900,
+  "background": {
+    "hex": "#5d747a",
+    "share": 0.304,
+    "rgb": [
+      93,
+      116,
+      122
+    ]
+  },
+  "panelTone": {
+    "hex": "#313131",
+    "share": 0.1141,
+    "rgb": [
+      49,
+      49,
+      49
+    ]
+  },
+  "primaryAccent": {
+    "hex": "#2a5363",
+    "share": 0.5303,
+    "rgb": [
+      42,
+      83,
+      99
+    ],
+    "hue": 196.8,
+    "sat": 0.404,
+    "light": 0.276,
+    "selectedFrom": "bright"
+  },
+  "brightText": [
+    {
+      "hex": "#dadbda",
+      "share": 0.1457,
+      "rgb": [
+        218,
+        219,
+        218
+      ]
+    },
+    {
+      "hex": "#d3d4d5",
+      "share": 0.1323,
+      "rgb": [
+        211,
+        212,
+        213
+      ]
+    },
+    {
+      "hex": "#bfbfbf",
+      "share": 0.1009,
+      "rgb": [
+        191,
+        191,
+        191
+      ]
+    },
+    {
+      "hex": "#82969e",
+      "share": 0.0404,
+      "rgb": [
+        130,
+        150,
+        158
+      ]
+    }
+  ],
+  "border": {
+    "hex": "#858380",
+    "count": 531,
+    "rgb": [
+      133,
+      131,
+      128
+    ]
+  },
+  "semantic": {
+    "red": {
+      "hex": "#875344",
+      "count": 96,
+      "rgb": [
+        135,
+        83,
+        68
+      ]
+    },
+    "green": {
+      "hex": "#24c50d",
+      "count": 8,
+      "rgb": [
+        36,
+        197,
+        13
+      ]
+    },
+    "amber": {
+      "hex": "#866b45",
+      "count": 120,
+      "rgb": [
+        134,
+        107,
+        69
+      ]
+    },
+    "cyan": {
+      "hex": "#2a5363",
+      "count": 1690,
+      "rgb": [
+        42,
+        83,
+        99
+      ]
+    }
+  },
+  "layout": {
+    "topBarHeight": 0,
+    "bottomBarHeight": 0,
+    "leftSidebarWidth": 0,
+    "rightSidebarWidth": 0,
+    "bodyLuminance": 102.59,
+    "centerLuminance": 110.25
+  },
+  "cornerRounding": {
+    "detected": false,
+    "radius": 0
+  },
+  "suggested": {
+    "themeColor": "#2a5363",
+    "bg": "#5d747a",
+    "panel2": "#313131",
+    "border": "#858380",
+    "dim": "#548192",
+    "borderWidth": 1,
+    "cornerRadius": 0
+  },
+  "reference": "reference-shot.png"
+}

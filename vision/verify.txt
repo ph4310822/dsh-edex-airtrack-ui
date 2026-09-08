@@ -1,0 +1,21 @@
+1. **Right sidebar background:** neutral dark gray, approximately **`#2D2D2D`** — not navy/blue-gray.
+
+2. **Accent color:** steel blue rather than cyan.  
+   - “Airplanes.live” link text: approximately **`#D0D0D0`** / light gray, not cyan.  
+   - Active “Search” tab: **`#005486`**.
+
+3. Sidebar/table colors:  
+   - “Total Aircraft” / “On Screen” numeric text: approximately **`#CFCFCF`**.  
+   - Table header background: **`#005486`**.  
+   - Table body row background: approximately **`#4388A0`** / muted steel-blue-gray.  
+   - Thin table-row dividers: approximately **`#2D2D2D`**.
+
+4. There are no conventional green/yellow/red *status-dot* indicators in the sidebar controls. The map does contain aircraft icons in many colors, including bright green, yellow, orange/red, blue, and magenta; those appear to be aircraft/category/color coding rather than sidebar status indicators. Approximate icon hues include green **`#00D000`**, yellow **`#E8E800`**, and red/orange **`#FF5A00`**.
+
+5. The vertical map-toolbar controls use a dark steel-blue fill around **`#005486`**, with lighter blue-gray borders around **`#4388A0`**.
+
+6. The map is not composed of flat, single-color regions—the underlying map tiles and dark overlay vary by location. Visually, the darkened ocean is roughly **`#617B7E`**, while darkened land is roughly **`#788574`**. These should be treated as representative sampled colors, not universal canvas fills.
+
+7. **Corners:**  
+   - Sidebar tabs, buttons, inputs, and table/control elements are effectively square: about **0–2 px** radius.  
+   - The floating map toolbar buttons are also mostly square/low-radius; the zoom controls themselves are circular, but the other map-control tiles are not broadly rounded 4px+ UI pills.

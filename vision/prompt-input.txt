@@ -1,0 +1,5 @@
+This is a crop of a form area in a dark aircraft-tracking console sidebar (search / jump-to-airport fields). Describe:
+1. Each input field: its background hex, its border hex, border width (px), corner radius (square or rounded?).
+2. Each button (Search / Clear Search / Jump): background hex when active/blue vs inactive/gray, border hex, radius.
+3. Any labels' text color hex.
+Answer with exact hex values per element.

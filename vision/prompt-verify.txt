@@ -1,0 +1,8 @@
+Look at this dark aircraft-tracking console screenshot (right side is a control sidebar, left side is a dark map). Answer precisely:
+1. Is the right sidebar panel background a NEUTRAL dark gray (like #2D2D2D) or a dark NAVY/BLUE-GRAY (like #141E29)? Give the hex.
+2. Is the main accent color of links/active tabs/buttons a CYAN (like #20C4D9) or a STEEL BLUE (like #4388A0 / #005486)? Give the hex of the 'Airplanes.live' link text and of the active 'Search' tab.
+3. What are the exact hexes of: the 'Total Aircraft'/'On Screen' number text, the table header row background, the table body row background, and the thin divider lines between table rows?
+4. Are there any GREEN, YELLOW or RED status indicators/elements in the sidebar or map controls? Where and what hex?
+5. The vertical map toolbar buttons on the map's right edge: their fill hex and border hex?
+6. The map canvas (excluding aircraft icons): what hex is the darkened ocean vs the darkened land?
+7. Corner radius of: the sidebar's buttons/tabs/inputs, and the floating map buttons — square (0-2px) or rounded (4px+)?

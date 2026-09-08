@@ -1,0 +1,7 @@
+Analyze this UI screenshot in detail for a design-system analysis. Report:
+1. LAYOUT: the major regions (top bar? left panel(s)? right panel(s)? bottom bar? main canvas?) and what each contains.
+2. COLORS: exact-looking hex estimates for (a) the main map/canvas background, (b) side panel/card backgrounds, (c) the primary accent color used for highlights/links/active states, (d) any semantic status colors (success green, warning yellow, error red), (e) primary text color and secondary/muted text color.
+3. BORDER STYLE: for each kind of box (side panels, cards/widgets inside panels, buttons, inputs): is there a border? solid/dashed? roughly how many px? what color? corner radius? any glow/box-shadow?
+4. KEY ELEMENTS: list every distinct widget/element you see (tables, lists, counters, gauges, buttons, controls, legends, search boxes, maps, charts) with its region.
+5. TYPOGRAPHY/STYLE: font character (mono? sans?), density, uppercase usage.
+Be specific and exhaustive.
