@@ -1,0 +1,75 @@
+/* Process widget: the reference's AIRCRAFT TABLE treatment
+   (analysis.json widgets.reference "AIRCRAFT TABLE"): steel-blue header band
+   (#064B75) with light text, steel row fills (#2A5363), 1px #242424 row
+   separators, amber #60572E selected-row highlight. The table runs on the
+   live process hooks — data semantics unchanged, visual language replaced. */
+
+/* Scrollable body fills the section's leftover height; the scrollbar is
+   hidden (mouse wheel / trackpad still scroll). */
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.procTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* The header band: the reference's filled steel-blue table header (#064B75,
+   1px #4388A0 lower edge, #D8D8D8 text). */
+.procTable th {
+  text-align: left;
+  font-weight: normal;
+  background: #064b75;
+  box-shadow: inset 0 -1px 0 #4388a0;
+  color: #d8d8d8;
+  padding: 2px 6px;
+}
+
+/* Data rows: steel fills (#2A5363) separated by 1px #242424 hairlines,
+   light text — the aircraft-table language. */
+.procTable td {
+  background: #2a5363;
+  border-bottom: 1px solid #242424;
+  color: #d8d8d8;
+  padding: 1px 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Selected-row highlight: the reference's amber fill (#60572E — the measured
+   selected aircraft row). */
+.procTable tr:hover td {
+  background: #60572e;
+}
+
+.procName {
+  max-width: 0;
+  width: 100%;
+}
+
+.num {
+  text-align: right;
+  width: 48px;
+}
+
+/* The loadavg footer bleeds to the section edges (the section carries the
+   10px side padding) and also cancels the section's bottom padding, so the
+   box ends at the panel edge. */
+.foot {
+  margin: auto -10px -8px;
+  padding: 6px 10px;
+  border-top: 1px solid var(--edex-border);
+}
+
+.footText {
+  color: #bfbfbf;
+}
