@@ -1,6 +1,0 @@
-This is a cropped region of a dark aircraft-tracking UI. Report the exact hex color values you can identify:
-- The dominant background color of the panel(s) in this crop.
-- The primary accent color (links, active tabs, highlighted text or buttons) - give the most saturated cyan/blue and any green/yellow/red status colors with their exact hex.
-- Text colors: primary text and secondary/muted text.
-- Border/divider line colors and input field background/border colors.
-- For each color, say which element it belongs to. Use exact hex notation (#RRGGBB).

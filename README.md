@@ -1,74 +1,79 @@
-# dsh-edex-ui
+# dsh-edex-airtrack-ui
 
-**DeepSeek Harness eDEX-UI shell plugin** — a terminal-inspired by https://github.com/GitSquared/edex-ui overlay for the
-DSH web GUI. Adds a classic eDEX-UI layout: system telemetry left bar, world-map
-right bar, filesystem browser, and a terminal-styled composer input — all wrapped
-around the original UI.
+**AIRTRACK** — an eDEX-UI style shell theme for the DeepSeek Harness web GUI, driven
+by the live aircraft-tracking console at [globe.airplanes.live](https://globe.airplanes.live/)
+(tar1090-style globe UI). Dark tactical-console chrome wraps the original workspace:
+left system bar, right flight bar with the featured **AIR TRACK** map, filesystem
+browser, and a terminal-styled composer input.
 
-![dsh-edex-ui screenshot](packages/bundle/assets/screenshot.png)
+![theme preview](preview.gif)
 
-## Features
+![AIRTRACK screenshot](screenshot.png)
 
-- **Left bar** — system overview panel: CPU, memory, swap, processes, platform
-  info, and thermal/power state, with per-core CPU sparklines
-- **Right bar** — network status + encom-globe world view with endpoint markers
-  and spline links, plus a dual up/down traffic chart with grid
-- **Top panel** — an empty full-width strip overlaying the shell's top edge
-  above every layer (ready for future chrome)
-- **Bottom panel** — one strip hosting three swappable widgets, each wrapped in
-  the same title/border chrome:
-  - **DIR** — filesystem browser as a terminal-style LIST (icon + name +
-    DIR/FILE), the same width as the left bar, with storage bar
-  - **PREVIEW** — file preview / editor pane (text, code, images), spanning
-    the center region
-  - **TERMINAL** — a real host shell: commands execute through the
-    `systemMetrics.runCommand` Remote (`sh -c`, 30s timeout), with client-side
-    `cd`/`clear`/`help`/`pwd`, ↑/↓ history, and a prompt that follows the
-    filesystem browser until you run your first command
-- **Terminal-styled composer** — flattened input capsule, green block caret, and
-  a `~/<workspace>` path prompt at the left edge of the input area
-- **Workspace-follow** — the dir panel and prompt track the active conversation's
-  workspace; switching sessions navigates both the filesystem browser and the
-  prompt
-- **Green-on-black skin** — token overrides recolour the entire original UI to
-  terminal green, without touching the user's theme preference
+## Theme
+
+Palette and border language are measured from the reference screenshot
+(`analysis.md` / `analysis.json` in this repo):
+
+- **Panel/card surface** `#313131` neutral gray on a **#262626** canvas — flat,
+  utilitarian, no glow anywhere
+- **Steel-cyan accent** `#5D9AB8` (lifted from the reference's table-row steel
+  `#2A5363` family); **header/active bands** `#064B75` with lighter `#4388A0`
+  edges — the reference's filled-band active language (no left accent bars)
+- **Cards**: full 1px `#242424` rectangles, square corners, hairline dividers
+- **Inputs**: dark `#1C1C1C` fields with 1px `#858585` borders
+- **Semantic hues** from the reference's altitude legend: green `#00C83C`,
+  yellow `#FFE500`, red `#F00000`, blue `#2364E8`, cyan `#00C8D8`
+- **Text**: `#D8D8D8` primary / `#BFBFBF` labels / `#858585` muted
+- The workspace shares the panel surface (`#313131`) and carries the same card
+  chrome (1px border + steel-blue title strip) as the side widgets
+
+## Widget reconciliation
+
+| Reference element | Shell slot | Implementation |
+|---|---|---|
+| Aircraft data table (steel header band, row fills, amber selected row) | `processes` (left bar, retitled **AIRCRAFT**) | restyled with the reference's table language, live host data |
+| Status counters line | `info` (left bar) | labeled live counters, hairline-divided |
+| **Tactical map / track display** | featured widget **AIR TRACK** (right bar) | dark graticule field, CSS-drifting multicolored aircraft tracks, amber selected-track readout, altitude gradient legend — replaces the WORLD VIEW globe |
+| Map control toolbar / search form / legend | — | folded into the widget chrome + input styling |
 
 ## Installation
 
-The plugin is published to npm as `@danielng23/dsh-edex-ui`. From the harness
+The plugin is published to npm as `@danielng23/dsh-airtrack-ui`. From the harness
 checkout:
 
 ```sh
-pnpm dsh plugin --profile web add @danielng23/dsh-edex-ui
-pnpm dsh web   # serves the eDEX shell over the default GUI
+pnpm dsh plugin --profile <profile> add @danielng23/dsh-airtrack-ui
 ```
 
-To run the local checkout instead of the npm release (for development), add
-the bundle with a `file:` path — its `file:` dependency specs link the local
-sub-packages:
+or with a local checkout of this repo:
 
 ```sh
-pnpm dsh plugin --profile web add file:/path/to/dsh-edex-ui/packages/bundle
+pnpm dsh plugin --profile <profile> add file:/path/to/dsh-edex-airtrack-ui/packages/bundle
 ```
 
-See [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md) for the three-instance port
-layout (3080 baseline / 3081 npm / 3083 local), the build, and the iteration
-workflow.
-
-## Development
-
-See [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md) for the full build, install,
-and iteration workflow. The widget architecture for the shell bars is
-documented in [WIDGETS.md](WIDGETS.md).
+Then boot as usual (`pnpm dsh --profile <profile>`). The Appearance settings row
+exposes the AIRTRACK steel-cyan accent (`#5d9ab8`); the whole original UI is
+recoloured through the alias-token override layer.
 
 ## Packages
 
-| Package | Host/Client | Description |
-|---|---|---|
-| `packages/bundle` | — | Installable bundle (`cordis.patch.yml`) |
-| `packages/ui-edex` | client | The eDEX shell frame and all panels |
-| `packages/ui-theme-terminal` | client | Appearance → Terminal theme row |
-| `packages/host/system-metrics` | host | System telemetry RPC + file read/write + `runCommand` shell execution |
+| Package | Purpose |
+|---|---|
+| `@danielng23/dsh-airtrack-ui` | the bundle (cordis patch wiring the shell) |
+| `@danielng23/dsh-airtrack-client-ui-edex` | the shell frame + widgets (browser half) |
+| `@danielng23/dsh-airtrack-client-ui-theme-terminal` | the alias-token theme row |
+| `@danielng23/dsh-airtrack-host-system-metrics` | the system-metrics Host Remote |
+
+## Development
+
+```sh
+pnpm install
+DSH_HARNESS=/path/to/deepseek-harness pnpm build
+```
+
+See `WIDGETS.md` for the widget-slot architecture and `analysis.md` for the
+full reference analysis.
 
 ## License
 

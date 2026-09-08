@@ -1,4 +1,0 @@
-1. No. The region is mostly an empty dark workspace with a narrow vertical sidebar and a `PREVIEW` panel; there is no clearly visible conversation area plus composer at the bottom.
-2. No. There is no thin steel-blue strip across the very top.
-3. The workspace is dark gray, matching the surrounding surface at roughly `#313131`, not black.
-4. No obvious card is painted over the main workspace. A bordered panel is visible near the top-right, but it appears to be part of the UI rather than an occluding overlay.

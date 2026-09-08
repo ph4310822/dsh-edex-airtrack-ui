@@ -1,5 +1,0 @@
-This is the center region of a rendered themed shell. Answer:
-1. Is a working app UI visible: a narrow sidebar on the left edge, a conversation/chat area, and a composer input at the bottom? Or is the region empty/black/covered?
-2. Is there a thin steel-blue title strip across the very top of this region?
-3. Is the workspace background the same dark gray surface as the surrounding cards (about #313131), or a different color (black)?
-4. Any occlusion (a card painted over the app UI)?

@@ -1,5 +1,0 @@
-This is the right column of a rendered dark console. Answer:
-1. List the widget cards visible and their title bands (color).
-2. Does one card show a tactical map: dark field, faint grid lines, small colored aircraft/track markers, and an altitude gradient legend strip at its bottom?
-3. Are the cards' corners square and borders thin/dark (no glow)?
-4. What is the color of the readout row (should be a dark amber/olive band)?
