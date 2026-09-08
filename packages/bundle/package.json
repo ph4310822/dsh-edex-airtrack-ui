@@ -1,7 +1,7 @@
 {
   "name": "@danielng23/dsh-airtrack-ui",
   "description": "AIRTRACK eDEX shell over the web surface: dark tactical aircraft-tracking console theme \u2014 gray console chrome, steel-blue accent, AIR TRACK map widget (airplanes.live reference)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publishConfig": {
     "access": "public"
   },
