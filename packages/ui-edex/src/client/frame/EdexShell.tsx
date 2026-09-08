@@ -40,6 +40,11 @@ export const CENTER_LEFT = '17vw'
 export const CENTER_RIGHT = '21.25vw'
 export const CENTER_BOTTOM = '36vh'
 
+/** The workspace card chrome inset: the center container's 1px border + the
+ * 19px steel-blue title strip — the reshaped workspace starts below them, so
+ * the strip (the card chrome framing the workspace) is never covered. */
+export const CENTER_TITLE_INSET = '20px'
+
 /** The top panel is empty, so it takes no space. Raise to give it height. */
 export const TOP_BAR_HEIGHT = '0px'
 
@@ -151,9 +156,11 @@ export function EdexShell({
     if (frame === null) return
     const saved = frame.getAttribute('style')
     frame.style.position = 'fixed'
-    // The empty top panel takes no space (TOP_BAR_HEIGHT = 0), so the
-    // original UI tiles from the viewport top like the shell bars.
-    frame.style.top = TOP_BAR_HEIGHT
+    // The center card chrome (1px border + 19px title strip) takes the top of
+    // the region: the original UI tiles in BELOW the strip so the workspace
+    // carries the same framed-card look as the shell bars without being
+    // covered.
+    frame.style.top = CENTER_TITLE_INSET
     frame.style.left = CENTER_LEFT
     frame.style.right = CENTER_RIGHT
     frame.style.bottom = CENTER_BOTTOM

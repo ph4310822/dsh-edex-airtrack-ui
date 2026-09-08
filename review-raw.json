@@ -1,42 +1,177 @@
 {
   "url": "http://127.0.0.1:3084/",
-  "shellPresent": false,
-  "timedOut": true,
+  "shellPresent": true,
+  "timedOut": false,
   "pageTitle": "DSH Local Build",
-  "errors": [
-    {
-      "kind": "console",
-      "text": "Error: failed to import loader entry f009a0ad (@danielng23/dsh-client-ui-edex): client-modules: require(\"@deepseek-ai/schemastery\") missed the module table — not a platform seed word, not a materialized module, and no registered package factory (a build-time externals drift, or a dynamic dependency that did not arrive)\n    at Dt (http://127.0.0.1:3084/assets/index-ClqxG24t.js:17:259)\n    at Dn._init (http://127.0.0.1:3084/assets/index-ClqxG24t.js:17:4088)\n    at async Dn.init (http://127.0.0.1:3"
-    }
-  ],
+  "errors": [],
   "computedStyles": {
-    "--edex-green": "",
-    "--edex-border": "",
-    "--edex-panel-2": "",
-    "--dsw-alias-label-primary": "#f9fafb",
-    "--dsw-alias-border-l1": "#ffffff0f",
-    "bodyBackground": "rgb(21, 21, 23)",
-    "shellPresent": false,
-    "shellDisplay": null,
-    "shellBg": null,
+    "--edex-green": "#5d9ab8",
+    "--edex-border": "#242424",
+    "--edex-panel-2": "#1c1c1c",
+    "--dsw-alias-label-primary": "#5d9ab8",
+    "--dsw-alias-border-l1": "#242424",
+    "bodyBackground": "rgb(49, 49, 49)",
+    "shellPresent": true,
+    "shellDisplay": "block",
+    "shellBg": "rgba(0, 0, 0, 0)",
     "panels": {
-      "left": null,
-      "right": null,
-      "bottom": null,
-      "top": null
+      "left": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(216, 216, 216)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      },
+      "right": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(216, 216, 216)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      },
+      "bottom": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(216, 216, 216)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      },
+      "top": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(216, 216, 216)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(38, 38, 38)",
+        "margin": "0px"
+      }
     },
-    "widgets": {},
+    "widgets": {
+      "info": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "cpu": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "processes": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "network-status": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "airtrack": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "traffic": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "files": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "preview": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "terminal": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(36, 36, 36)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgb(49, 49, 49)",
+        "margin": "2px"
+      },
+      "center": {
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderColor": "rgb(216, 216, 216)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "margin": "0px"
+      }
+    },
     "workspace": {
-      "sidebar": false,
-      "conversation": false,
-      "composer": false,
-      "center": null
+      "sidebar": true,
+      "conversation": true,
+      "composer": true,
+      "center": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "margin": "0px",
+        "visibility": "visible"
+      }
     },
-    "workspacePresent": false,
+    "workspacePresent": true,
     "worldViewGone": true,
-    "widgetIds": []
+    "widgetIds": [
+      "info",
+      "cpu",
+      "processes",
+      "network-status",
+      "airtrack",
+      "traffic",
+      "files",
+      "preview",
+      "terminal",
+      "center"
+    ]
   },
-  "workspacePresent": false,
+  "workspacePresent": true,
   "screenshot": "/Users/daniel/workspace/arisos/dsh-edex-ui-airtrack/review-shot.png",
-  "probedAt": "2026-09-08T04:45:05.412Z"
+  "probedAt": "2026-09-08T04:49:19.243Z"
 }

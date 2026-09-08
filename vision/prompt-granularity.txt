@@ -1,0 +1,6 @@
+This is a cropped column of a rendered dark console UI. Answer:
+1. How many distinct card boxes do you see? For each: does it have a full thin border? What border color (dark hairline / invisible / bright)? Corner radius (square or rounded)? Any glow?
+2. Do the cards have a filled steel-blue title band at their top with light text?
+3. Is there a gap between adjacent cards, and what shows in the gap (darker canvas)?
+4. For any table visible: header band color, row fill color, row separators.
+Answer with hex values where possible.

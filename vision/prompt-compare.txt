@@ -1,0 +1,7 @@
+Compare these two UIs. The FIRST image is the design reference (a dark aircraft-tracking console: dark map with colored aircraft icons, right sidebar with steel-blue table, counters, tabs, search form). The SECOND image is a rendered eDEX-style terminal shell built from that reference's theme.
+Answer precisely:
+1. Does the rendered version (second) apply the same color family as the reference (first): neutral dark gray panels (#313131-ish), darker canvas, steel-blue/cyan accents, light gray text, yellow/red semantic accents?
+2. Does the rendered version show filled steel-blue header bands on its widget cards (like the reference's table header band)?
+3. Does the rendered version show an aircraft/track map widget (colored aircraft markers, altitude gradient legend) in the right bar?
+4. Does the rendered version's center region show a working app UI (sidebar + conversation + composer) framed by a card chrome with a blue title strip?
+5. What are the biggest mismatches?
