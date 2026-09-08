@@ -1,7 +1,7 @@
 {
   "name": "@danielng23/dsh-airtrack-client-ui-theme-terminal",
   "description": "AIRTRACK token theme: registers the steel-blue tactical-console alias-token theme and an Appearance row to pick it",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publishConfig": {
     "access": "public"
   },

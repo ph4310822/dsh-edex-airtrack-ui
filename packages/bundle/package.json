@@ -1,7 +1,7 @@
 {
   "name": "@danielng23/dsh-airtrack-ui",
   "description": "AIRTRACK eDEX shell over the web surface: dark tactical aircraft-tracking console theme \u2014 gray console chrome, steel-blue accent, AIR TRACK map widget (airplanes.live reference)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
@@ -20,8 +20,8 @@
     "cordis.patch.yml"
   ],
   "dependencies": {
-    "@danielng23/dsh-airtrack-client-ui-edex": "^0.1.0",
-    "@danielng23/dsh-airtrack-client-ui-theme-terminal": "^0.1.0",
+    "@danielng23/dsh-airtrack-client-ui-edex": "^0.1.1",
+    "@danielng23/dsh-airtrack-client-ui-theme-terminal": "^0.1.1",
     "@danielng23/dsh-airtrack-host-system-metrics": "^0.1.1"
   },
   "license": "MIT"
