@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "filename": "reference-shot.png",
+    "url": "https://globe.airplanes.live/",
+    "source": "vision",
+    "capturedAt": "2026-09-08",
+    "direction": "tactical map / radar console",
+    "referenceShot": "dsh-edex-ui-airtrack/reference-shot.png",
+    "viewport": "1600x900",
+    "notes": "Web-discovered reference (Step 0). Live aircraft-tracking console (tar1090-style globe UI). Analysis produced by the external vision service (scripts/vision-call.sh: full-image glance, region crops, targeted verify pass, input-form pass) plus pixel-exact measurement (scripts/analyze-ui.py, scripts/measure-accent2.py, direct BMP pixel sampling) — measurement only sharpens vision-derived values, never substitutes for them."
+  },
+  "theme": {
+    "background": "#262626",
+    "panelTone": "#313131",
+    "primaryAccent": "#5D9AB8",
+    "secondaryAccent": "#4A7D96",
+    "textPrimary": "#D8D8D8",
+    "textSecondary": "#BFBFBF",
+    "textMuted": "#858585",
+    "semanticColors": {
+      "success": "#00C83C",
+      "warn": "#FFE500",
+      "error": "#F00000",
+      "info": "#2364E8",
+      "cyan": "#00C8D8"
+    },
+    "glowColor": null,
+    "notes": "Values measured from THIS reference only. Dominant UI chrome (right sidebar panel surface) is a neutral dark gray #313131 (pixel-modal; vision concurs, explicitly NOT navy). The main canvas is a darkened tactical map — its flat-color analog for the shell canvas is a darker neutral #262626 so the #313131 card surfaces pop against it. Accent family is steel blue→cyan: table row fill #2A5363 (hue ~197°, modal of 131,984 sampled px), table header / toolbar button band #064B75 (modal of the blue bucket), lighter blue-gray borders #4388A0, link text #4873A8. #5D9AB8 is the UI-durable lift of that steel-cyan family for accents/text; #4A7D96 its dim. Text: #D8D8D8 primary (measured row-text mode), #BFBFBF secondary (counts line), #858585 muted/labels. Semantic hues read from the reference's own altitude legend + aircraft coloring: green #00C83C, yellow #FFE500, red #F00000, blue #2364E8, cyan #00C8D8. No glow/neon anywhere in the reference — flat utilitarian chrome."
+  },
+  "borderFeatures": {
+    "frame": {
+      "presence": "partial",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#3F3F3F",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "notes": "The reference draws NO outer page frame: the sidebar surface meets the map directly with no drawn border line. For the shell, bar cells get a minimal 1px hairline in the chrome family (#3F3F3F, a tone just above the #313131 surface, kin to the measured #242424 internal lines) purely to separate the eDEX bar cells; no radius, no glow."
+    },
+    "cards": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#242424",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "fill": "#313131",
+      "notes": "Widgets/cards are flat rectangles: #313131 fill, square corners (cornerRounding detected:false, radius 0), no shadow/glow, separated by 1px #242424 hairlines (the measured dark internal band around the table header region). Internal section bands inside a card are divided by the same #242424 hairlines."
+    },
+    "dividers": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#242424",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "notes": "1px dark hairlines: table row separators alternate #2A5363 rows against #313131 gaps; header region bounded by #242424 lines. The table header itself is a filled steel-blue band #064B75."
+    },
+    "inputs": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 1,
+      "color": "#858585",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "fill": "#1C1C1C",
+      "notes": "Search/jump input fields: dark flat rectangles, fill ~#1C1C1C (vision; pixel scan found the dark input runs in the form region), 1px mid-gray border #858585 (measured #858585 text/border tone), square corners."
+    },
+    "activeIndicators": {
+      "presence": "full",
+      "style": "solid",
+      "widthPx": 2,
+      "color": "#4388A0",
+      "cornerRadiusPx": 0,
+      "glow": null,
+      "activeFill": "#064B75",
+      "selectedRowFill": "#60572E",
+      "notes": "The reference's active language is a FILLED band, not a left accent bar: active Search tab and toolbar buttons are solid steel-blue fills (#064B75 modal) with 1px #4388A0 lighter borders; the selected aircraft table row is highlighted with an amber fill #60572E (measured 1,514 px mode in the table region). eDEX treeitem active state maps to a filled steel-blue band + accent text; no bracket, no glow."
+    }
+  },
+  "layout": {
+    "regions": [
+      { "name": "tactical map canvas", "topBar": false, "leftBar": false, "rightBar": false, "bottomBar": false, "cards": false, "gauges": false, "radar": false, "map": true, "description": "Full-height darkened map (ocean #5D747A-mode, land #858380-mode under a dark overlay) with multicolored aircraft icons, covering the left ~75% of the viewport" },
+      { "name": "control sidebar", "topBar": false, "leftBar": false, "rightBar": true, "bottomBar": false, "cards": true, "gauges": false, "radar": false, "description": "Right sidebar (x≈1200–1600, full height), continuous #313131 surface: promo header (Airplanes.live link + FAQ/Map Help/Discord), aircraft counters, Search/Filters/Columns tabs, search + jump forms, dense aircraft table" },
+      { "name": "floating map controls", "topBar": true, "leftBar": false, "rightBar": false, "bottomBar": false, "cards": false, "description": "Compact icon buttons floating over the map top: 'Try the new UI' callout + H/T/layer/arrow utility buttons" },
+      { "name": "vertical map toolbar", "topBar": false, "leftBar": false, "rightBar": false, "bottomBar": false, "cards": false, "description": "Stack of square steel-blue buttons (#064B75 fill, #4388A0 borders) on the map's right edge: settings + lettered layer/filter buttons (L O K M I P R F)" },
+      { "name": "altitude legend", "topBar": false, "leftBar": false, "rightBar": false, "bottomBar": true, "cards": false, "description": "Bottom-center horizontal altitude gradient legend: black→cyan #00C8D8→green #00C83C→yellow #FFE500→orange #FF5A00→red #F00000→magenta #D500E8→blue #2364E8, numeric ticks, 'ALTITUDE' label" },
+      { "name": "map furniture", "topBar": false, "leftBar": false, "rightBar": false, "bottomBar": true, "cards": false, "description": "Bottom-left '10 NM' scale bar, bottom-right OSM attribution, lower-right zoom +/- controls" }
+    ]
+  },
+  "keyElements": [
+    { "type": "map", "description": "Dark tactical map canvas with dozens of multicolored aircraft icons (heading-oriented), color-coded by altitude/category", "region": "mapCanvas" },
+    { "type": "table", "description": "Dense aircraft data table: colored status cell, country flag, callsign, type, squawk, altitude, speed, signal; steel-blue header band #064B75, row fill #2A5363, 1px separators, amber selected row #60572E", "region": "rightSidebar" },
+    { "type": "counters", "description": "Live status counters line: 'Total Aircraft: 6619' / 'On Screen: 80' in #BFBFBF with #CFCFCF numerals", "region": "rightSidebar" },
+    { "type": "tabs", "description": "Three-tab switcher Search/Filters/Columns; active tab is a solid steel-blue fill", "region": "rightSidebar" },
+    { "type": "form", "description": "Search input + Search/Clear Search buttons; jump-to-airport/lat-lon inputs + Jump button; dark inputs with 1px #858585 borders", "region": "rightSidebar" },
+    { "type": "toolbar", "description": "Vertical stack of square steel-blue map buttons with 1px lighter borders", "region": "mapRightEdge" },
+    { "type": "legend", "description": "Altitude color gradient legend strip at map bottom", "region": "mapBottom" },
+    { "type": "links", "description": "Promo header: 'Improve Coverage:' label, large underlined 'Airplanes.live' link, FAQ/Map Help/Discord links, build string", "region": "rightSidebarTop" }
+  ],
+  "widgets": {
+    "reference": [
+      { "name": "AIRCRAFT TABLE", "type": "table/list", "region": "rightSidebar", "description": "Dense scrollable data table with steel-blue header band, alternating steel row fills, 1px dark separators, amber selected-row highlight" },
+      { "name": "STATUS COUNTERS", "type": "counters", "region": "rightSidebar", "description": "Two live numeric counters (total aircraft / on screen) as a compact labeled stats line" },
+      { "name": "MAP CONTROL TOOLBAR", "type": "toolbar/buttons", "region": "mapRightEdge", "description": "Vertical stack of square steel-blue icon buttons" },
+      { "name": "TACTICAL MAP", "type": "map/track display", "region": "mapCanvas", "description": "Dark map canvas with colored aircraft track markers and an altitude gradient legend strip" },
+      { "name": "SEARCH/FILTER FORM", "type": "form", "region": "rightSidebar", "description": "Tabbed search/filter form: dark inputs, square buttons" },
+      { "name": "ALTITUDE LEGEND", "type": "legend/gradient", "region": "mapBottom", "description": "Horizontal altitude color scale with ticks" }
+    ],
+    "matches": [
+      { "reference": "AIRCRAFT TABLE", "slot": "processes", "match": "high", "notes": "eDEX processes list is the dense data-table/list slot — restyle as the aircraft table: steel-blue header band #064B75, row separators 1px #242424, text #D8D8D8, amber hover/selected fill #60572E; keep the live hook data" },
+      { "reference": "STATUS COUNTERS", "slot": "info", "match": "partial", "notes": "eDEX info widget is the labeled live-stats slot — restyle as compact counters (label + numeric value, #D8D8D8/#BFBFBF, #242424 hairline dividers)" },
+      { "reference": "TACTICAL MAP", "slot": "globe", "match": "partial", "notes": "The reference's central map is the world-view equivalent (Assumption 7): the existing globe implementation is replaced by the reference-styled tactical map/track widget rather than kept" },
+      { "reference": "MAP CONTROL TOOLBAR", "slot": null },
+      { "reference": "SEARCH/FILTER FORM", "slot": null },
+      { "reference": "ALTITUDE LEGEND", "slot": null, "notes": "Folded into the featured map widget as its bottom legend strip" }
+    ],
+    "featured": {
+      "reference": "TACTICAL MAP",
+      "name": "AIR TRACK",
+      "slot": "airtrack",
+      "replaces": "WORLD VIEW (globe)",
+      "notes": "Signature widget: a dark tactical map/track display — #262626 field, faint graticule/contour lines, multicolored aircraft track markers (legend hues #00C8D8/#00C83C/#FFE500/#F00000/#2364E8), altitude gradient legend strip at the bottom, square corners, 1px #242424 frame, no glow. Sample/static track content (hooks provide no geographic data — Edge Case: static/sample content, divergence noted in review)."
+    }
+  }
+}
