@@ -20,9 +20,6 @@
     "cordis.patch.yml"
   ],
   "dependencies": {
-    "@danielng23/dsh-client-ui-edex": "file:../ui-edex",
-    "@danielng23/dsh-client-ui-theme-terminal": "file:../ui-theme-terminal",
-    "@danielng23/dsh-host-system-metrics": "file:../host/system-metrics",
     "@danielng23/dsh-airtrack-client-ui-edex": "^0.1.0",
     "@danielng23/dsh-airtrack-client-ui-theme-terminal": "^0.1.0",
     "@danielng23/dsh-airtrack-host-system-metrics": "^0.1.1"
