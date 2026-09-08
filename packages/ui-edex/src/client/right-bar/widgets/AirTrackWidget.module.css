@@ -1,0 +1,130 @@
+/* AIR TRACK widget styles (analysis.json widgets.featured): the dark tactical
+   map field, animated track markers, amber selected-track readout, and the
+   altitude gradient legend — square corners, 1px hairlines, no glow. */
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 140px;
+}
+
+/* The map field: the reference's dark canvas (#262626) inside a 1px #242424
+   frame; square corners. */
+.mapField {
+  position: relative;
+  flex: 1;
+  min-height: 110px;
+  background: #262626;
+  border: 1px solid #242424;
+  overflow: hidden;
+}
+
+.mapSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Track drift: a pure translation between the track's from/to points (CSS
+   custom properties set inline per track); the heading rotation is constant
+   in both keyframe endpoints. Linear + alternate keeps every marker inside
+   the field forever. */
+.track {
+  animation: airtrack-drift 16s linear infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes airtrack-drift {
+  from {
+    transform: translate(var(--fx), var(--fy)) rotate(var(--rot));
+  }
+  to {
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot));
+  }
+}
+
+.selectHalo {
+  stroke: none;
+}
+
+/* The mini map-control toolbar: square steel-blue buttons (#064B75 fill,
+   1px #4388A0 border — the reference's map-toolbar language), top-right of
+   the field. */
+.miniToolbar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.miniBtn {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  line-height: 1;
+  color: #d8d8d8;
+  background: #064b75;
+  border: 1px solid #4388a0;
+  border-radius: 0;
+}
+
+/* Selected-track readout: the reference's amber selected-row band (#60572E)
+   with light text. */
+.readout {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 6px;
+  background: #60572e;
+  color: #d8d8d8;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.readoutId {
+  color: #ffffff;
+}
+
+.readoutData {
+  color: #d8d8d8;
+}
+
+/* Altitude legend: the reference's gradient strip
+   (analysis.json theme.semanticColors) with muted tick labels. */
+.legend {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.legendScale {
+  height: 5px;
+  border: 1px solid #242424;
+  background: linear-gradient(
+    to right,
+    #1a1a1a 0%,
+    #00c8d8 18%,
+    #00c83c 32%,
+    #ffe500 46%,
+    #ff5a00 60%,
+    #f00000 72%,
+    #d500e8 86%,
+    #2364e8 100%
+  );
+}
+
+.legendLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #858585;
+}
