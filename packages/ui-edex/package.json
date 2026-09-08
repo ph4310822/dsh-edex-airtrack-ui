@@ -1,7 +1,7 @@
 {
   "name": "@danielng23/dsh-airtrack-client-ui-edex",
   "description": "AIRTRACK eDEX shell frame: dark tactical aircraft-tracking console theme \u2014 system/AIRCRAFT left bar, AIR TRACK map + network right bar, filesystem browser bottom, original UI centered",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
